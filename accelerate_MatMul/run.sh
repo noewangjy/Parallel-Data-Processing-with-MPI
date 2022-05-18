@@ -20,7 +20,7 @@ echo '============== Generate Data and Test Numpy ================='
 python3 ./utils/generate_data.py -a $A -b $B -c $C -d $D -p $DATA_PATH
 echo '=================== Test of MPI ==================='
 
-for i in $(seq 1 5)
+for i in $(seq 1 8)
 do
   mpirun -n "$i" ./build/MatMul $ROOT_RANK $MATRIX_PATH_1 $MATRIX_PATH_2 $RESULT_PATH
 done
